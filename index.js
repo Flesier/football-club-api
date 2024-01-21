@@ -1,5 +1,8 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
+mongoose.connect('mongodb://localhost/database_name', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const app = express();
 const port = process.env.PORT || 4000;
